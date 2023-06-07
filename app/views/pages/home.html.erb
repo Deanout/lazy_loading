@@ -1,0 +1,17 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<div class="flex flex-col items-center justify-center" 
+    data-controller="content-loader" 
+    data-content-loader-url-value="<%= pages_lazy_load_path %>">
+  <div class="flex items-center mb-4">
+    <i class="fas fa-spinner fa-spin text-4xl mr-2"></i>
+  </div>
+  <span>Loading posts...</span>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <% 10.times do %>
+      <div class="p-4 h-full">
+        <%= render "post_template" %>
+      </div>
+    <% end %>
+  </div>
+</div>

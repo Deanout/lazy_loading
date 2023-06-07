@@ -1,0 +1,17 @@
+<div id="<%= dom_id post %>" class="p-6 flex flex-col h-full">
+  <div class="flex-1 bg-white rounded-lg shadow-md p-4 mb-4 flex flex-col justify-between">
+    <div>
+      <p class="font-bold text-xl mb-2">
+        <%= post.title %>
+      </p>
+      <p class="text-gray-700 text-base">
+        <%= post.body %>
+      </p>
+    </div>
+    <% if local_assigns[:show_link] %>
+      <div class="mt-2">
+        <%= link_to "Show this post", post, class: "text-blue-500 hover:text-blue-800" %>
+      </div>
+    <% end %>
+  </div>
+</div>
